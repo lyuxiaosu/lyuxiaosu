@@ -29,6 +29,11 @@ nav a {
     font-size: 18px;
 }
 
+nav a.active {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
 nav a:hover {
     color: #00d4ff;
 }
