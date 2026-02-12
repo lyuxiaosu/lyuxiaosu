@@ -99,19 +99,31 @@ nav a:hover {
     color: #00d4ff;        /* 悬停蓝色 */
 }
 
-a {
-    color: #00d4ff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-}
-
 .home {
     text-align: center;
 }
 
 h1 {
     margin-bottom: 20px;
+}
+
+/* 所有链接默认颜色 */
+a:link {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+/* 访问过的链接 */
+a:visited {
+    color: #00d4ff;
+}
+
+/* 鼠标悬停 */
+a:hover {
+    color: white;
+}
+
+/* 点击时 */
+a:active {
+    color: white;
 }
