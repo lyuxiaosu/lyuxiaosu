@@ -99,6 +99,15 @@ nav a:hover {
     color: #00d4ff;        /* 悬停蓝色 */
 }
 
+a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
 .home {
     text-align: center;
 }
