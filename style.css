@@ -90,7 +90,7 @@ nav a:hover {
 
 /* Publications 链接 */
 .container ul li a {
-    color: #00d4ff;      /* 你可以改成白色 white 也可以 */
+    color: white;      /* 你可以改成白色 white 也可以 */
     text-decoration: underline;  /* 可选，看你喜不喜欢下划线 */
     margin-right: 10px;   /* 链接之间有点空隙 */
 }
