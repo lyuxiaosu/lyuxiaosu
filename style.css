@@ -90,13 +90,13 @@ nav a:hover {
 
 /* Publications 链接 */
 .pub-link {
-    color: white;          /* 白色，更明显 */
+    color: #00d4ff;          /* 白色，更明显 */
     text-decoration: underline; /* 可选 */
     margin-right: 10px;
 }
 
 .pub-link:hover {
-    color: #00d4ff;        /* 悬停蓝色 */
+    color: white;        /* 悬停蓝色 */
 }
 
 .home {
