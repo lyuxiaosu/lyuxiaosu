@@ -67,12 +67,22 @@ nav a:hover {
     white-space: pre-line;     /* 保留 HTML 中的换行符 */
 }
 
-.about-text .news {
+/* News 标题 */
+.news-title {
     font-weight: bold;
-    font-size: 20px;           /* 可以调大一点 */
-    color: #00d4ff;            /* 蓝色，高亮显示 */
-    margin-top: 30px;           /* 与正文分隔 */
-    text-align: left;           /* news 左对齐，更突出 */
+    font-size: 22px;          /* 标题大号 */
+    color: #00d4ff;           /* 高亮蓝色 */
+    margin-top: 30px;         /* 距离正文 */
+    text-align: left;
+}
+
+/* News 描述 */
+.news-content {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .home {
