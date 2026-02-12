@@ -88,6 +88,18 @@ nav a:hover {
     line-height: 1.5;
 }
 
+/* Publications 链接 */
+.container ul li a {
+    color: #00d4ff;      /* 你可以改成白色 white 也可以 */
+    text-decoration: underline;  /* 可选，看你喜不喜欢下划线 */
+    margin-right: 10px;   /* 链接之间有点空隙 */
+}
+
+/* 鼠标悬停效果 */
+.container ul li a:hover {
+    color: #ffffff;       /* 悬停变白，更明显 */
+}
+
 .home {
     text-align: center;
 }
