@@ -45,7 +45,8 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
 
-    margin: 0 auto;
+    display: block;
+    margin: 40px auto;
 }
 
 h1 {
