@@ -3,58 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiaosu | PhD & Systems Engineer</title>
+    <title>Xiaosu | Principal Systems Engineer & PhD</title>
     <style>
-        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background: #f9f9f9; }
-        header { border-bottom: 2px solid #007bff; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { margin: 0; color: #222; }
-        .tagline { color: #007bff; font-weight: bold; font-size: 1.1em; }
-        .section { margin-bottom: 30px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        h2 { border-left: 4px solid #007bff; padding-left: 10px; margin-top: 0; }
-        .pub-item { margin-bottom: 15px; }
-        .pub-title { font-weight: bold; display: block; }
-        .pub-venue { color: #666; font-style: italic; }
-        .links a { color: #007bff; text-decoration: none; margin-right: 10px; font-size: 0.9em; }
-        .links a:hover { text-decoration: underline; }
-        .skill-tag { background: #e9ecef; padding: 3px 10px; border-radius: 15px; font-size: 0.85em; margin-right: 5px; }
+        /* 基础样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; scroll-behavior: smooth; }
+
+        /* 全屏背景图 */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background.jpg') no-content center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #00d4ff;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0,212,255,0.5);
+        }
+
+        /* 导航栏 */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        nav a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: #00d4ff; }
+
+        /* 内容板块 */
+        .section { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .section:nth-child(even) { background: #f4f7f9; max-width: 100%; padding-left: calc((100% - 900px)/2); padding-right: calc((100% - 900px)/2); }
+        
+        h2 { color: #0056b3; margin-bottom: 30px; font-size: 2em; border-bottom: 2px solid #00d4ff; display: inline-block; }
+        
+        /* 卡片样式 */
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; border-left: 5px solid #00d4ff; }
+        .card h3 { margin-bottom: 10px; color: #222; }
+        .tags { margin-top: 10px; }
+        .tag { background: #e0f7fa; color: #007b9b; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: 500; }
+
+        footer { text-align: center; padding: 40px; background: #222; color: white; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Xiaosu [Your Last Name]</h1>
-    <div class="tagline">PhD Candidate & Senior Systems Engineer (13+ Years C++)</div>
-    <p>Focusing on High-Performance Systems, RDMA/DPDK, and Cloud-Native Infrastructure.</p>
-    <div class="links">
-        <a href="mailto:your@email.com">Email</a>
-        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-        <a href="https://github.com/yourgithub">GitHub</a>
-        <a href="#">Google Scholar</a>
+    <div class="hero">
+        <img src="avatar.png" alt="Xiaosu" class="avatar">
+        <h1>Xiaosu [Your Name]</h1>
+        <p style="font-size: 1.2em; max-width: 600px; margin-top: 15px;">PhD Candidate & Software Principal Engineer with 13 years of expertise in High-Performance Systems.</p>
     </div>
-</header>
 
-<div class="section">
-    <h2>🔬 Selected Publications</h2>
-    <div class="pub-item">
-        <span class="pub-title">Optimizing Sub-millisecond FaaS Platforms via RDMA-based Runtimes</span>
-        <span class="pub-venue">USENIX ATC 202X</span>
-        <div class="links"><a href="#">[PDF]</a><a href="#">[Code]</a><a href="#">[BibTeX]</a></div>
-    </div>
-</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+    </nav>
 
-<div class="section">
-    <h2>🛠 Selected Projects</h2>
-    <div class="pub-item">
-        <span class="pub-title">DPDK-based High-Throughput Telemetry System</span>
-        <p>Built a custom network stack to process 100Gbps telemetry data with zero packet loss.</p>
-        <span class="skill-tag">C++</span><span class="skill-tag">DPDK</span><span class="skill-tag">Performance Tuning</span>
-    </div>
-</div>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I bridge the gap between academic research and industrial-scale deployment. My work focuses on low-latency systems, kernel-bypass networking (RDMA/DPDK), and high-performance infrastructure.</p>
+    </section>
 
-<div class="section">
-    <h2>💼 Industrial Expertise</h2>
-    <p>13 years of architecting production-grade systems, bridging the gap between cutting-edge research and stable industrial deployment.</p>
-</div>
+    <section id="experience" class="section">
+        <h2>Professional Experience</h2>
+        <div class="card">
+            <h3>Principal Software Engineer</h3>
+            <p><strong>[Current Company] | 2020 - Present</strong></p>
+            <p>Leading the architecture of next-generation distributed storage systems using C++20.</p>
+        </div>
+        <div class="card">
+            <h3>Senior Systems Architect</h3>
+            <p><strong>[Previous Company] | 2013 - 2020</strong></p>
+            <p>Optimized core networking stack, reducing latency by 40% for global data centers.</p>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <h2>Selected Publications</h2>
+        <div class="card">
+            <h3>"Zero-Copy FaaS: Leveraging RDMA for Sub-millisecond Cold Starts"</h3>
+            <p><em>Published in USENIX ATC 2025</em></p>
+            <div class="tags"><span class="tag">RDMA</span><span class="tag">Serverless</span><span class="tag">C++</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Xiaosu. Built with Passion and C++ Precision.</p>
+    </footer>
 
 </body>
 </html>
