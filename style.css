@@ -88,30 +88,37 @@ nav a:hover {
     line-height: 1.5;
 }
 
+/* 确保列表本身没有缩进 */
+.experience-list {
+    list-style: none;      /* 去掉圆点 */
+    padding-left: 0;       /* 核心：去掉左侧默认缩进 */
+    margin-left: 0;        /* 核心：确保外边距归零 */
+}
+
 .experience-list li {
     display: flex;
     flex-wrap: nowrap;      /* 强制不换行 */
-    align-items: flex-start; /* 顶部对齐 */
+    align-items: flex-start;
     margin-bottom: 12px;
+    padding-left: 0;        /* 确保每一行也是顶头的 */
 }
 
 .exp-time {
-    width: 180px;           /* 稍微缩小一点时间宽度 */
-    flex-shrink: 0;         /* 防止时间被压缩 */
+    width: 180px;           /* 时间宽度 */
+    flex-shrink: 0;         /* 防止时间被挤压 */
     font-weight: bold;
 }
 
 .exp-company {
-    width: 250px;           /* 调整公司宽度到合适范围 */
-    flex-shrink: 0;         /* 关键：防止公司名因为空间不足被挤压换行 */
+    width: 280px;           /* 增加一点宽度给长公司名 */
+    flex-shrink: 0;         /* 防止公司名被挤压 */
     font-style: italic;
-    padding-right: 15px;    /* 给公司和职位之间留点呼吸空间 */
-    white-space: nowrap;    /* 强制文字在一行内显示 */
+    white-space: nowrap;    /* 强制公司名不换行 */
+    padding-right: 15px;    /* 与职位保持间距 */
 }
 
 .exp-position {
-    flex: 1;                /* 职位自动占据剩余空间 */
-    /* 如果职位名也想强制不换行，可以加：white-space: nowrap; */
+    flex: 1;                /* 占据剩余空间 */
 }
 
 /* Publications 链接 */
