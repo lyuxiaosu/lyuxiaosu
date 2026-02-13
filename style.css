@@ -88,6 +88,32 @@ nav a:hover {
     line-height: 1.5;
 }
 
+.experience-list {
+    list-style: none;       /* 去掉默认小圆点 */
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    display: flex;
+    flex-wrap: wrap;        /* 如果太长换行 */
+    margin-bottom: 10px;
+}
+
+.exp-time {
+    width: 160px;           /* 时间固定宽度 */
+    font-weight: bold;
+}
+
+.exp-company {
+    width: 120px;           /* 公司固定宽度 */
+    font-style: italic;
+}
+
+.exp-position {
+    flex: 1;                /* 职位占剩余空间 */
+}
+
 /* Publications 链接 */
 .pub-link {
     color: #00d4ff;          /* 白色，更明显 */
