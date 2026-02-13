@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    color: #E0E0E0;
 }
 
 .overlay {
@@ -23,7 +23,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #E0E0E0;
     text-decoration: none;
     margin: 0 25px;
     font-size: 18px;
@@ -63,7 +63,7 @@ nav a:hover {
     line-height: 1.6;          /* 行间距 */
     margin-top: 20px;          /* 上间距 */
     font-size: 18px;           /* 字体大小 */
-    color: white;
+    color: #E0E0E0;
     white-space: pre-line;     /* 保留 HTML 中的换行符 */
 }
 
