@@ -88,30 +88,30 @@ nav a:hover {
     line-height: 1.5;
 }
 
-.experience-list {
-    list-style: none;       /* 去掉默认小圆点 */
-    padding: 0;
-    margin: 0;
-}
-
 .experience-list li {
     display: flex;
-    flex-wrap: wrap;        /* 如果太长换行 */
-    margin-bottom: 10px;
+    flex-wrap: nowrap;      /* 强制不换行 */
+    align-items: flex-start; /* 顶部对齐 */
+    margin-bottom: 12px;
 }
 
 .exp-time {
-    width: 200px;           /* 时间固定宽度 */
+    width: 180px;           /* 稍微缩小一点时间宽度 */
+    flex-shrink: 0;         /* 防止时间被压缩 */
     font-weight: bold;
 }
 
 .exp-company {
-    width: 500px;           /* 公司固定宽度 */
+    width: 250px;           /* 调整公司宽度到合适范围 */
+    flex-shrink: 0;         /* 关键：防止公司名因为空间不足被挤压换行 */
     font-style: italic;
+    padding-right: 15px;    /* 给公司和职位之间留点呼吸空间 */
+    white-space: nowrap;    /* 强制文字在一行内显示 */
 }
 
 .exp-position {
-    flex: 1;                /* 职位占剩余空间 */
+    flex: 1;                /* 职位自动占据剩余空间 */
+    /* 如果职位名也想强制不换行，可以加：white-space: nowrap; */
 }
 
 /* Publications 链接 */
