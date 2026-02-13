@@ -62,7 +62,7 @@ nav a:hover {
     text-align: justify;       /* 两端对齐 */
     line-height: 1.6;          /* 行间距 */
     margin-top: 20px;          /* 上间距 */
-    font-size: 20px;           /* 字体大小 */
+    font-size: 18px;           /* 字体大小 */
     color: white;
     white-space: pre-line;     /* 保留 HTML 中的换行符 */
 }
