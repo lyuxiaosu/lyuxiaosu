@@ -107,6 +107,7 @@ nav a:hover {
     width: 180px;           /* 时间宽度 */
     flex-shrink: 0;         /* 防止时间被挤压 */
     font-weight: bold;
+    margin-right: 40px;
 }
 
 .exp-company {
@@ -114,7 +115,7 @@ nav a:hover {
     flex-shrink: 0;         /* 防止公司名被挤压 */
     font-style: italic;
     white-space: nowrap;    /* 强制公司名不换行 */
-    padding-right: 15px;    /* 与职位保持间距 */
+    padding-right: 25px;    /* 与职位保持间距 */
 }
 
 .exp-position {
