@@ -33,16 +33,24 @@
             <p> </p>However, most existing serverless platforms rely on operating system schedulers such as the Completely Fair Scheduler (CFS) or Earliest Eligible Virtual Deadline First (EEVDF). These schedulers prioritize fairness over deadline awareness by dividing CPU time into small slices and frequently rotating among tasks. While fairness is desirable in general-purpose systems, it is often suboptimal for heterogeneous, latency-critical serverless workloads. Short time slices increase context-switch overhead and degrade performance, whereas long time slices may block short, urgent tasks, leading to missed deadlines. </p>
 
 
-            <p> SledgeScale is a serverless platform specifically designed for resource-constrained edge environments. It leverages WebAssembly for lightweight isolation, kernel-bypass networking for low-latency communication, and a customized user-level scheduler for deadline-aware execution. This design achieves strong isolation, low latency, high function density, and scalable performance while ensuring deadline compliance under limited edge resources. For a detailed description of the system design, implementation, and evaluation, please see our <a href="https://dl.acm.org/doi/epdf/10.1145/3769102.3770623" target="_blank">paper</a>. </p>
+            <p> SledgeScale is a serverless platform specifically designed for resource-constrained edge environments. It leverages WebAssembly for lightweight isolation, kernel-bypass networking (RDMA, DPDK) for low-latency communication, and a customized user-level scheduler (interrupt-driven) for deadline-aware execution. This design achieves strong isolation, low latency, high function density, and scalable performance while ensuring deadline compliance under limited edge resources. For a detailed description of the system design, implementation, and evaluation, please see our <a href="https://dl.acm.org/doi/epdf/10.1145/3769102.3770623" target="_blank">paper</a>. </p>
         </li>
 
         <li>
             <a href="https://github.com/lyuxiaosu/sledge-serverless-framework/tree/linear_chain_srsf" target="_blank">
                 <strong>DAG Functions Extension</strong>
             </a>
-            <br>
-            An extension for efficiently processing latency-sensitive DAG workloads
-            in serverless edge environments.
+            <p> Many emerging applications require near real-time processing and responses that cannot be reliably achieved by today’s cloud infrastructures, thereby necessitating computation at the edge. Serverless computing is a promising architecture for edge environments because it enables fine-grained resource scaling based on application demand. </p>
+
+
+            <p> As edge applications grow more complex, they are increasingly composed of multiple interacting functions or microservices. Such workflows can naturally be represented as Directed Acyclic Graphs (DAGs). However, supporting DAG-based workloads in serverless platforms introduces new challenges in sandbox instantiation, inter-function communication, and scheduling. </p>
+
+
+            <p> In this project, we extend <a href="https://gbouloukakis.com/files/csc7321_f22/sledge.pdf" target="_blank"> Sledge </a>, a WebAssembly-based serverless runtime, to support efficient execution of DAG functions. Sledge’s lightweight design enables extremely fast sandbox instantiation — under 30 μs per invocation — significantly mitigating cold-start overhead, which is particularly detrimental to DAG workloads. </p>
+
+
+            <p> To avoid expensive coordination through shared storage, we introduce a high-performance in-memory communication channel for propagating intermediate data across the DAG. Furthermore, we incorporate deadline-awareness into DAG execution by providing a pluggable set of user-level schedulers (e.g., EDF and SRSF) to ensure timely completion under latency constraints. For a detailed description, please see our <a href="https://dl.acm.org/doi/abs/10.1145/3517206.3526274" target="_blank">paper</a>. </p>
+
         </li>
     </ul>
 </div>
