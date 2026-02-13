@@ -101,12 +101,12 @@ nav a:hover {
 }
 
 .exp-time {
-    width: 180px;           /* 时间固定宽度 */
+    width: 200px;           /* 时间固定宽度 */
     font-weight: bold;
 }
 
 .exp-company {
-    width: 120px;           /* 公司固定宽度 */
+    width: 200px;           /* 公司固定宽度 */
     font-style: italic;
 }
 
